@@ -166,7 +166,7 @@ partial class Weapon
 		}
 
 		ViewModelEntity?.SetAnimBool( "fire", true );
-		CrosshairPanel?.OnEvent( "fire" );
+		if ( CrosshairPanel is Crosshair c ) c.fireCounter += 2;
 	}
 	public bool TakeAmmo( int amount )
 	{

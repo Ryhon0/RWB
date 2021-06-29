@@ -6,7 +6,7 @@ public class Crosshair : Panel
 {
 	public static bool UseReloadTimer = false;
 
-	int fireCounter;
+	public int fireCounter;
 	Label ReloadTimer;
 	public Crosshair()
 	{
@@ -35,16 +35,5 @@ public class Crosshair : Panel
 
 		if ( fireCounter > 0 )
 			fireCounter--;
-	}
-
-	public override void OnEvent( string eventName )
-	{
-		if ( eventName == "fire" )
-		{
-			// this is a hack until we have animation or TriggerClass support
-			fireCounter += 2;
-		}
-
-		base.OnEvent( eventName );
 	}
 }
