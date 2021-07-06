@@ -13,7 +13,8 @@ public enum HoldType
 	Unarmed = 0,
 	Pistol = 1,
 	SMG = 2,
-	Shotgun = 3
+	Shotgun = 3,
+	Universal = 4
 }
 public partial class Weapon : BaseWeapon
 {
