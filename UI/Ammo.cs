@@ -26,10 +26,11 @@ public class Ammo : Panel
 
 		if ( weapon.ClipSize == 1 )
 		{
-			Weapon.Text = "";
+			Style.SetClass("hidden", true);
 		}
 		else
 		{
+			Style.SetClass("hidden", false);
 			Weapon.Text = $"{weapon.AmmoClip}  / {weapon.ClipSize}";
 		}
 	}
