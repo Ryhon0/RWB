@@ -66,6 +66,8 @@ partial class Weapon
 
 				if ( Projectile != null ) ShootProjectile( Projectile, Spread, ProjectileSpeed, Force, Damage, BulletsPerShot );
 				else ShootBullet( Spread, Force, Damage, BulletSize, BulletsPerShot );
+
+				(Owner as AnimEntity).SetAnimBool("b_attack", true);
 			}
 		}
 	}
